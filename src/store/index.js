@@ -8,26 +8,26 @@ export default new Vuex.Store({
     counter: 0
   },
   mutations: {
-    incrementM (state, payload) {
+    increment (state, payload) {
+      console.log('Mutacija increment');
       state.counter++;
     },
-    decrementM (state, payload) {
+    decrement (state, payload) {
+      console.log('Mutacija decrement');
       state.counter--;
     }
   },
   actions: {
     increment (context, payload) {
-      context.commit('incrementM', payload);
+      console.log('Akcija increment');
+      context.commit('increment', payload);
     },
     decrement (context, payload) {
-      context.commit('decrementM', payload);
+      console.log('Akcija decrement');
+      context.commit('decrement', payload);
     }
   },
   getters: {
-    counterG: (state) => {
-			return () => {
-				return state.counter;
-			}
-		}
+    counter: (state) => () => state.counter
   }
 })

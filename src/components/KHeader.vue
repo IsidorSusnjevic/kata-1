@@ -1,7 +1,7 @@
 <template>
    <div class="hedd">
      <h3>Number of Clicks</h3>
-     <span>{{ $store.getters.counterG() }}</span>
+     <span>{{ $store.getters.counter() }}</span>
    </div>
 </template>
 
