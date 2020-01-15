@@ -8,23 +8,33 @@ export default new Vuex.Store({
     counter: 0
   },
   mutations: {
-    increment (state, payload) {
-      console.log('Mutacija increment');
+    changeCounter (state, payload) {
+      // if(payload.sign == '+')
+      //   state.counter++;
+      // else
+      //   state.counter--;
+
+
+      // uslov ? tacno : netacno;
+
+      payload.sign == '+' ? state.counter += 2 : state.counter -= 2;
+    },
+    increment (state) {
       state.counter++;
     },
-    decrement (state, payload) {
-      console.log('Mutacija decrement');
+    decrement (state) {
       state.counter--;
     }
   },
   actions: {
-    increment (context, payload) {
-      console.log('Akcija increment');
-      context.commit('increment', payload);
+    changeCounter (context, payload) {
+      context.commit('changeCounter', payload);
     },
-    decrement (context, payload) {
-      console.log('Akcija decrement');
-      context.commit('decrement', payload);
+    increment (context) {
+      context.commit('increment');
+    },
+    decrement (context) {
+      context.commit('decrement');
     }
   },
   getters: {

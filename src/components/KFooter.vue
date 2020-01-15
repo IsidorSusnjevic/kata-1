@@ -1,13 +1,19 @@
 <template>
   <div>
-    <button v-on:click="$store.dispatch('increment')">+</button>
-    <button v-on:click="$store.dispatch('decrement')">-</button>
+    <button v-on:click="multipleActions">+</button>
+    <button v-on:click="$store.dispatch('changeCounter', { sign: '-' })">-</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "kfooter"
+  name: "kfooter",
+  methods: {
+    multipleActions () {
+      this.$store.dispatch('increment');
+      this.$store.dispatch('changeCounter', { sign: '+' });
+    }
+  }
 };
 </script>
 
