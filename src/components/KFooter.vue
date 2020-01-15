@@ -1,7 +1,7 @@
 <template>
   <div>
-    <button v-on:click="$emit('increment')">+</button>
-    <button v-on:click="$emit('decrement')">-</button>
+    <button v-on:click="$store.dispatch('increment')">+</button>
+    <button v-on:click="$store.dispatch('decrement')">-</button>
   </div>
 </template>
 

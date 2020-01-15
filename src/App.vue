@@ -1,9 +1,7 @@
 <template>
   <div>
-    <KHeader :count="counter"/>
-    <KFooter
-      @increment="counter++"
-      @decrement="counter--" />
+    <KHeader />
+    <KFooter />
   </div>
 </template>
 
@@ -14,11 +12,6 @@ import KFooter from './components/KFooter'
 
 export default {
   name: "app",
-  data () {
-    return {
-      counter: 0
-    };
-  },
   components: {
     KHeader,
     KButton,

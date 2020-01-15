@@ -1,16 +1,13 @@
 <template>
    <div class="hedd">
      <h3>Number of Clicks</h3>
-     <span>{{ count }}</span>
+     <span>{{ $store.getters.counterG() }}</span>
    </div>
 </template>
 
 <script>
 export default {
-  name: "kheader",
-  props: {
-    count: Number
-  }
+  name: "kheader"
 }
 </script>yt
 
