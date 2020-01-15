@@ -1,7 +1,7 @@
 <template>
    <div class="hedd">
      <h3>Number of Clicks</h3>
-     <span>{{ pisa }}</span>
+     <span>{{ count }}</span>
    </div>
 </template>
 
@@ -9,10 +9,11 @@
 export default {
   name: "kheader",
   props: {
-    pisa: Number
+    count: Number
   }
 }
-</script>
+</script>yt
+
 
 <style>
 .hedd {
@@ -24,11 +25,13 @@ export default {
   justify-content: center;
 }
 
-.hedd h3 {
-  font-size: 46px;
+h3 {
+  font-size: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 span {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
   font-size: 46px;
   padding-left: 200px

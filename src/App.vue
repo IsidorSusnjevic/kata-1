@@ -1,8 +1,9 @@
 <template>
   <div>
-    <KHeader :pisa="ccounter"/>
-    <KButton @clickkk="increment" />
-    <KFooter @clickkk="increment" @dclick="decrement"/>
+    <KHeader :count="counter"/>
+    <KFooter
+      @increment="counter++"
+      @decrement="counter--" />
   </div>
 </template>
 
@@ -15,23 +16,14 @@ export default {
   name: "app",
   data () {
     return {
-      ccounter: 0
+      counter: 0
     };
   },
   components: {
     KHeader,
     KButton,
     KFooter
-  },
-  methods: {
-    increment: function () {
-      this.ccounter++;
-    },
-    decrement: function () {
-      this.ccounter--;
-    }
   }
-
 };
 </script>
 

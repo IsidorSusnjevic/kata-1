@@ -1,21 +1,13 @@
 <template>
   <div>
-    <button v-on:click="onClick">+</button>
-    <button v-on:click="onDclick">-</button>
+    <button v-on:click="$emit('increment')">+</button>
+    <button v-on:click="$emit('decrement')">-</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "kfooter",
-  methods: {
-    onClick() {
-      this.$emit("clickkk");
-    },
-    onDclick() {
-      this.$emit("dclick");
-    }
-  }
+  name: "kfooter"
 };
 </script>
 
